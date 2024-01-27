@@ -2,6 +2,7 @@ package main
 
 import (
 	"ciphgoer/cli"
+	"ciphgoer/gui"
 	"flag"
 	"fmt"
 )
@@ -24,5 +25,6 @@ func main() {
 		}
 	} else {
 		fmt.Println("Starting GUI...")
+		gui.StartGui()
 	}
 }
