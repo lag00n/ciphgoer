@@ -10,8 +10,10 @@ build:
 clean:
 	go clean
 	rm ${BIN_NAME}
-run: build
+run:
 	./${BIN_NAME} ${args}
+
+rebuild: build run
 
 deps:
 	go get fyne.io/fyne/v2
