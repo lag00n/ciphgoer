@@ -16,9 +16,11 @@ func StartGui() {
 
 	win.Resize(fyne.NewSize(400, 400))
 	ab := widget.NewLabel("Selected file path will appear here.")
+	teste := widget.NewLabel("Test message")
 
 	filePicker := func() {
 		dialog.ShowFileOpen(func(f fyne.URIReadCloser, err error) {
+			// Check for error or user cancel
 			if err != nil {
 				dialog.NewError(err, win).Show()
 				return
@@ -29,12 +31,19 @@ func StartGui() {
 				return
 			}
 
+			// Make the selected file path appear.
 			ab.SetText(f.URI().String())
 		}, win)
 	}
 
 	win.SetContent(container.NewVBox(
 		ab,
+		container.NewHBox(
+			teste,
+			widget.NewButton("Click", func() {
+				teste.SetText("Works!")
+			}),
+		),
 		widget.NewButton("Select a file", func() {
 			filePicker()
 		}),
