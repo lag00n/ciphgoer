@@ -4,19 +4,17 @@
 * What is that?
 
 Basically, that is a simple encoding/decoding tool that aims to do that job using multiple well known cipher methods. 
-Currently, only caesar cipher is supported, but that's a WIP, so a plenty of cipher methods are being implemented. 
 I did this mainly for some learning purposes and for the hobby, but I do really hope that can be useful for someone sometime. Have fun using it!
+Please notice that is WIP, so expect bugs. Any contributions are appreciated!
+
+* Currently supported ciphers
+- Vigenere cipher
+- Caesar cipher
 
 * Planned Features
 
 - [ ] Usage on text files. (Both as input or output)
 - [ ] GUI and better CLI experience
 - [ ] Golang library 
-
-* TODOs
-
-*** Improve CLI (the actual one is just a sketch)
-*** Create GUI/TUI (it doesn't even exist yet)
-*** Fix/find better approaches to some spaggethi code.
 
 =Install instructions and usage help are going to be added soon=
